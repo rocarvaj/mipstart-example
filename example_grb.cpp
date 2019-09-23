@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
     assert(!status);
     vector<double> sortedsolution(numvars);
 
-    for(int i = 0; i < solution.size()-1; ++i)
+    for(int i = 0; i < solution.size(); ++i)
     {
         int idx;
         status = GRBgetvarbyname(model, 

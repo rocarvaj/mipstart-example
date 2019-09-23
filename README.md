@@ -1,9 +1,12 @@
 # Adding mip starts
-This code is meant to isolate a weird behavior by CPLEX (12.7.1 and 12.8). 
+~~This code is meant to isolate a weird behavior by CPLEX (12.7.1 and 12.8). 
 When adding the optimal solution for the `markshare2` problem, provided in 
 [MIPLIB2017](http://miplib.zib.de/downloads/solutions/markshare2/1/markshare2.sol.gz),
 as a MIP start, CPLEX claims that no feasible solution was found from it. This does not
-happen when using Gurobi.
+happen when using Gurobi.~~
+
+**Edit:** I had a dumb bug in my code. This code reads a .SOL solution (as provided by MIPLIB)
+and adds it as a MIP start. There is a CPLEX and a Gurobi version.
 
 ## Requirements
 * [Boost](https://www.boost.org) (just for the split function for strings).

@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
     // We sort the solution, according to index in problem
     vector<double> sortedsolution(CPXgetnumcols(env, problem));
 
-    for(int i = 0; i < solution.size()-1; ++i)
+    for(int i = 0; i < solution.size(); ++i)
     {
         int idx;
         status = CPXgetcolindex(env, 
